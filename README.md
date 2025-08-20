@@ -41,7 +41,10 @@ A **Spring Boot microservice** to manage **Tour Packages** with:
 👉 http://13.127.196.184:8080/api/tours
 
 ### 📬 Postman Collection
-📂 postman_collection.json → Import into Postman to test all APIs
+📂 postman_collection.json → Import into Postman to test all APIs 
+
+👉 [View Collection](https://github.com/anshggupta/Assignment/blob/main/postman_collection.json)  
+👉 [Raw JSON Link](https://raw.githubusercontent.com/anshggupta/Assignment/main/postman_collection.json)
 
 
 
