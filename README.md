@@ -1,4 +1,4 @@
-# 🌍 Tour Package Management Microservice
+# 🌍 MapMyTour Backend
 
 ![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-3.0-brightgreen?style=for-the-badge&logo=springboot)
@@ -78,7 +78,8 @@ docker run -d --name springboot_app \
   -e SPRING_DATASOURCE_PASSWORD=Gpak#1234 \
   -p 8080:8080 anshggupta/docker-springboot-app
 
- 📖 API Documentation
+### 📖 API Documentation
+
 🌍 Base URLs
 
 Environment	URL
