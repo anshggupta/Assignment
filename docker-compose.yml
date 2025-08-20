@@ -5,9 +5,9 @@ services:
     image: postgres:15
     container_name: postgres-db
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Gpak#1234}
-      POSTGRES_DB: ${POSTGRES_DB:-mapmytripdb}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:
@@ -16,15 +16,26 @@ services:
       - app-network
 
   app:
-    image: anshggupta/docker-springboot-app:latest  # use prebuilt image instead of build: .
+    image: anshggupta/docker-springboot-app:latest
     container_name: springboot-app
     depends_on:
       - db
     environment:
-      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-default}
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB:-mapmytripdb}
-      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-postgres}
-      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-Gpak#1234}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      AWS_REGION: ${AWS_REGION}
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_KEY: ${AWS_SECRET_KEY}
+      AWS_BUCKET: ${AWS_BUCKET}
+
+#      environment:
+#        AWS_REGION: ${AWS_REGION}
+#        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY}
+#        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_KEY}
+#        AWS_BUCKET: ${AWS_BUCKET}
+
     ports:
       - "8080:8080"
     networks:
