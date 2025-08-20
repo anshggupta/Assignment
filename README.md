@@ -40,6 +40,10 @@ A **Spring Boot microservice** to manage **Tour Packages** with:
 
 👉 http://13.127.196.184:8080/api/tours
 
+### 📬 Postman Collection
+📂 postman_collection.json → Import into Postman to test all APIs
+
+
 
 ## ⚙️ Setup Instructions
 
@@ -131,10 +135,8 @@ POST /api/tours/{id}/image
 curl -X POST http://13.127.196.184:8080/api/tours/1/image \
   -F "file=@/path/to/local/image.jpg"
 
-📬 Postman Collection
-📂 postman_collection.json → Import into Postman to test all APIs
 
- ☁️ AWS S3 Integration
+### ☁️ AWS S3 Integration
 Bucket: map-my-tour-bucket
 
 Region: ap-south-1
@@ -147,7 +149,7 @@ cloud.aws.s3.bucket=map-my-tour-bucket
 
 cloud.aws.region.static=ap-south-1
 
- 🚀 Deployment on AWS EC2
+### 🚀 Deployment on AWS EC2
 SSH into EC2
 
 Install Docker
@@ -157,7 +159,7 @@ Pull Docker Image:
 docker pull anshggupta/docker-springboot-app
 Run PostgreSQL + App containers
 
-📂 Project Structure
+### 📂 Project Structure
 
 Assignment/
 ├── src/                 # Spring Boot source code
