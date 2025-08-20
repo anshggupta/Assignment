@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "87a03ff2-4885-4370-bcfc-99e2d72af797",
+    "name": "Map-My-Tour-Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44113565"
+  },
+  "item": [
+    {
+      "name": "Create-Tour-Package",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n      \"id\": 1,\r\n      \"image\": \"https://images.unsplash.com/photo-1598275277521-1885382d523a\",\r\n      \"discountInPercentage\": \"17%\",\r\n      \"title\": \"Himalayan Trek Adventure\",\r\n      \"description\": \"14-day trek through the Himalayas\",\r\n      \"duration\": \"14Days/13Nights\",\r\n      \"actualPrice\": \"$1200\",\r\n      \"discountedPrice\": \"$1000\",\r\n      \"currency\": \"USD\",\r\n      \"location\": \"leh\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/tours",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "tours"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List-All-Packages",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n      \"id\": 1,\r\n      \"image\": \"https://images.unsplash.com/photo-1598275277521-1885382d523a\",\r\n      \"discountInPercentage\": \"17%\",\r\n      \"title\": \"Himalayan Trek Adventure\",\r\n      \"description\": \"14-day trek through the Himalayas\",\r\n      \"duration\": \"14Days/13Nights\",\r\n      \"actualPrice\": \"$1200\",\r\n      \"discountedPrice\": \"$1000\",\r\n      \"currency\": \"USD\",\r\n      \"location\": \"leh\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/tours",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "tours"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get-Package-By-id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n      \"id\": 1,\r\n      \"image\": \"https://images.unsplash.com/photo-1598275277521-1885382d523a\",\r\n      \"discountInPercentage\": \"17%\",\r\n      \"title\": \"Himalayan Trek Adventure\",\r\n      \"description\": \"14-day trek through the Himalayas\",\r\n      \"duration\": \"14Days/13Nights\",\r\n      \"actualPrice\": \"$1200\",\r\n      \"discountedPrice\": \"$1000\",\r\n      \"currency\": \"USD\",\r\n      \"location\": \"leh\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/tours/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "tours",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload/replace-image-for-a-tour",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "postman-cloud:///1f07c324-098a-4540-8d73-96ae2777fbd9"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/tours/1/image",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "tours",
+            "1",
+            "image"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "http://localhost:8080",
+      "type": "default"
+    }
+  ]
+}
