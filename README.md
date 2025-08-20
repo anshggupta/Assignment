@@ -33,10 +33,17 @@ A **Spring Boot microservice** to manage **Tour Packages** with:
 - **Deployment:** Docker, AWS EC2
 
 ---
+## 🔗 Deployed Link
+👉 http://13.127.196.184:8080/api/tours
+
+## Access API: 
+
+👉 http://13.127.196.184:8080/api/tours
+
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone Repo
+ 1️⃣ Clone Repo
 
 git clone https://github.com/anshggupta/Assignment.git
 cd Assignment
@@ -64,7 +71,7 @@ docker run -d --name springboot_app \
   -e SPRING_DATASOURCE_PASSWORD=Gpak#1234 \
   -p 8080:8080 anshggupta/docker-springboot-app
 
-### 📖 API Documentation
+ 📖 API Documentation
 🌍 Base URLs
 
 Environment	URL
@@ -124,10 +131,10 @@ POST /api/tours/{id}/image
 curl -X POST http://13.127.196.184:8080/api/tours/1/image \
   -F "file=@/path/to/local/image.jpg"
 
-### 📬 Postman Collection
+📬 Postman Collection
 📂 postman_collection.json → Import into Postman to test all APIs
 
-### ☁️ AWS S3 Integration
+ ☁️ AWS S3 Integration
 Bucket: map-my-tour-bucket
 
 Region: ap-south-1
@@ -140,7 +147,7 @@ cloud.aws.s3.bucket=map-my-tour-bucket
 
 cloud.aws.region.static=ap-south-1
 
-### 🚀 Deployment on AWS EC2
+ 🚀 Deployment on AWS EC2
 SSH into EC2
 
 Install Docker
@@ -149,8 +156,6 @@ Pull Docker Image:
 
 docker pull anshggupta/docker-springboot-app
 Run PostgreSQL + App containers
-
-### Access API: 👉 http://13.127.196.184:8080/api/tours
 
 📂 Project Structure
 
@@ -161,8 +166,6 @@ Assignment/
 ├── README.md
 └── pom.xml
 
-### 🔗 Deployed Link
-👉 http://13.127.196.184:8080/api/tours
 
 📝 Author
 
